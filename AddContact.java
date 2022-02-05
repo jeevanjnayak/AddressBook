@@ -14,6 +14,9 @@ public class AddContact {
     private String state;
     private int zip;
 
+    public String getFirstName() {
+        return firstName;
+    }
     public String setFirstName(String firstName){
         this.firstName = firstName;
         return firstName;
@@ -46,41 +49,10 @@ public class AddContact {
         this.zip = zip;
         return zip;
     }
-    public static void main(String[] args) {
-
-        AddContact person = new AddContact();
-
-        System.out.println("add person details");
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter person first name: ");
-        person.setFirstName(scanner.next());
-
-        System.out.println("Enter person last name: ");
-        person.setLastName(scanner.next());
-
-        System.out.println("Enter mobile number: ");
-        person.setPhoneNumber(scanner.nextLong());
-
-        System.out.println("Enter the Email id: ");
-        person.setEmailId(scanner.next());
-
-        System.out.println("Enter address Details: ");
-        System.out.println("Enter address: ");
-        person.setAddress(scanner.next());
-
-        System.out.println("Enter city: ");
-        person.setCity(scanner.next());
-
-        System.out.println("Enter State name: ");
-        person.setState(scanner.next());
-
-        System.out.println("Enter zip: ");
-        person.setZips(scanner.nextInt());
-
-        System.out.println("The entered person details is as follows: ");
-        System.out.println("Name - " + person.firstName + " " + person.lastName + "\nPhone number - " + person.phoneNumber +
-                           "\nEmail id - " + person.emailId + "\nAddress - " + person.address + "\nCity - " + person.city +
-                           "\nState - " + person.state + "\nZip - " + person.zip);
-    }
+    @Override
+    public String toString() {
+        return "\nPerson Info [first Name= " + firstName + ", last Name= " + lastName + ", Email id= " + emailId +
+                ", address= " + address + "," + " city= " + city + ", state= " + state + ", zipcode= " + zip + ", " +
+                "phoneNumber= " + phoneNumber + "]\n";
+        }
 }
