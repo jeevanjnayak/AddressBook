@@ -10,7 +10,7 @@ public class EditContact {
     static int counter;
 
 
-    public static void readData() {
+    public static void addContact() {
 
         AddContact person = new AddContact();
 
@@ -47,7 +47,7 @@ public class EditContact {
         System.out.println("Person added");
         counter++;
     }
-    static void editContactPerson() {
+    static void editContact() {
 
         if (counter > 0) {
             System.out.println("Enter Persons FirstName you want to edit: ");
@@ -103,11 +103,11 @@ public class EditContact {
 
             switch (choice) {
                 case 1:
-                    readData();
+                    addContact();
                     break;
                 case 2:
                     System.out.println("The entered person details is as follows: ");
-                    editContactPerson();
+                    editContact();
                     break;
                 case 3:
                     System.out.println(personList.toString());
